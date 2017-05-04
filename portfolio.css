@@ -300,6 +300,7 @@ div#main_slider figure img { width: 25%; float: left;}
     }
     #menu-icon{
         position: absolute;
+        top: 3vh;
         right: 10vw;
         display: inline-block;
     }
