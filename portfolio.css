@@ -195,10 +195,7 @@ a:link {text-decoration: none; color: black;}
 }
 
 #main_slider {
-    position: relative;
-    top: 26vh;
-    max-width: 100%;
-    height: auto;
+    
 }
 @keyframes slidy {
 0% { left: 0%; }
@@ -212,7 +209,13 @@ a:link {text-decoration: none; color: black;}
 
 body { margin: 0; } 
 
-div#main_slider { overflow: hidden; }
+div#main_slider { 
+    width: 60vw;
+    height: auto;
+    overflow: hidden;
+    float: left;
+    
+}
 
 div#main_slider figure { 
   position: relative;
@@ -222,8 +225,30 @@ div#main_slider figure {
 }
 div#main_slider figure img { width: 25%; float: left; }
 
-
-
-
+.wrapper{
+    z-index: -1;
+    position: relative;
+    top: 26vh;
+    max-width: 90vw;
+    height: auto;
+    margin-left: 5vw; 
+}
+.others{
+    position: relative;
+    right: 0;
+    width: 30vw;
+    height: auto;
+    display: flex;
+}
+.the_others{
+    max-width: 100%;
+}
+.bottom{
+    padding-top: 24.3vh;
+    margin-left: 5vw;
+    width: 90vw;
+    display: flex;
+    justify-content: space-between;
+}
 
   
