@@ -49,7 +49,16 @@ header ul{
     
     
 }
-
+#menu-icon{
+    display: none;
+    width: 38px;
+    height: 38px;
+    background: url(image/nav_1.png) center;
+    
+}
+a:hover#menu-icon{
+    border-radius:4px 4px 0 0;
+}
 header ul li{
     font-size: 0.8rem;
     font-weight: 300;
@@ -263,4 +272,57 @@ div#main_slider figure img { width: 25%; float: left;}
     position: absolute;
     right: 0;
 }
-  
+#menu_2 {
+    display: none;
+}
+  /*------------------MEDIA!!!!----------------------*/
+
+@media only screen and (max-width: 768px) {
+    
+    
+    .aboutcontent{
+        position: inherit;
+        width: 95%;
+    }
+    #description_text{
+        width: 80vw;
+    }
+    nav {
+        display: none;
+    }
+   
+    .item_secondpage{
+        width: 100%;
+        height: auto;
+    }
+    #menu{
+        display: none;
+    }
+    #menu-icon{
+        position: absolute;
+        right: 10vw;
+        display: inline-block;
+    }
+    nav ul, nav:active ul {
+        display: none;
+        z-index: 1000;
+    }
+    nav:hover ul{
+        display: block;
+    }
+    #menu_2{
+    padding-bottom: 10vh;
+    width: 90vw;
+    list-style: none;
+    display: flex;
+    font-size: 0.8rem;
+    font-weight: 300;
+    justify-content: space-between;
+    }
+    
+}
+
+
+
+
+
