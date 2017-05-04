@@ -214,7 +214,7 @@ div#main_slider {
     height: auto;
     overflow: hidden;
     float: left;
-    
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.5);
 }
 
 div#main_slider figure { 
@@ -223,7 +223,7 @@ div#main_slider figure {
   margin: 0;
   animation: 24s slidy infinite; 
 }
-div#main_slider figure img { width: 25%; float: left; }
+div#main_slider figure img { width: 25%; float: left;}
 
 .wrapper{
     z-index: -1;
@@ -239,20 +239,25 @@ div#main_slider figure img { width: 25%; float: left; }
     width: 29.5vw;
     height: auto;
     display: flex;
-    padding-bottom: 0.5vh;
+    margin-bottom: 1vh;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.5);
 }
 .the_others{
-    max-width: 100%;
+    width: 100%;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.5);
 }
 .bottom{
-    padding-top: 25.1vh;
+    padding-top: 27vh;
     margin-left: 5vw;
     width: 90vw;
+    min-height: 18vh;
     display: flex;
     justify-content: space-between;
+    
 }
-.figure{
+.figure{ 
     width: 29.5vw;
+    
 }
 .figure_1{
     position: absolute;
