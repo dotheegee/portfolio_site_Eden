@@ -1,9 +1,14 @@
-#main{
+#main_page_body{
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+/*    overflow-x: hidden;*/
+}
+#scond_page_body{
     font-family: 'Roboto', sans-serif;
     font-size: 14px;
     overflow-y: hidden;
 }
-#second_page{
+#description_page_body{
     font-family: 'Roboto', sans-serif;
     font-size: 14px;
     overflow-x: hidden;
@@ -106,6 +111,14 @@ footer{
     padding-left: 5vw;
     top: 0;
 }
+#slider_main {
+    position:relative;
+/*    height: 53vh;*/
+    padding-top: 26vh;
+    display: flex;
+    padding-left: 5vw;
+    top: 0;
+}
 .description{
     padding-top: 26vh;
     padding-left: 5vw;
@@ -178,6 +191,39 @@ a:link {text-decoration: none; color: black;}
 /*    background-color: aqua;*/
     font-size: 0.8rem;
     font-weight: 300;
-    margin-top: -10px;
-    
+    margin-top: -10px;    
 }
+
+#main_slider {
+    position: relative;
+    top: 26vh;
+    max-width: 100%;
+    height: auto;
+}
+@keyframes slidy {
+0% { left: 0%; }
+30% { left: 0%; }
+35% { left: -100%; }
+62.5% { left: -100%; }
+67.5% { left: -200%; }
+95% { left: -200%; }
+100% { left: -300%; }
+}
+
+body { margin: 0; } 
+
+div#main_slider { overflow: hidden; }
+
+div#main_slider figure { 
+  position: relative;
+  width: 400%;
+  margin: 0;
+  animation: 24s slidy infinite; 
+}
+div#main_slider figure img { width: 25%; float: left; }
+
+
+
+
+
+  
