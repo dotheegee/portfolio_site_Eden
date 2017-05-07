@@ -3,7 +3,7 @@
     font-size: 14px;
 /*    overflow-x: hidden;*/
 }
-#scond_page_body{
+#main_page_body{
     font-family: 'Roboto', sans-serif;
     font-size: 14px;
     overflow-y: hidden;
@@ -78,9 +78,8 @@ nav{
 /*    background-color: aqua;*/
       overflow: hidden;
       position: fixed;
-      width: 90vw;
+      width: 95vw;
       top: 15vh;
-      margin-left: 5vw;
       border-bottom: 1px solid gray;
 }
 nav ul{
@@ -277,8 +276,11 @@ div#main_slider figure img { width: 25%; float: left;}
 }
   /*------------------MEDIA!!!!----------------------*/
 
-@media only screen and (max-width: 768px) {
-    
+@media screen and (max-width: 980px) {
+   
+    #main_page_body{
+    overflow-y: visible;
+    }
     #home_logo{
         position: absolute;
         top: 3vh;
@@ -298,42 +300,48 @@ div#main_slider figure img { width: 25%; float: left;}
     #menu{
         display: none;
     }
+    header{
+        display:inline-block;
+        height: 20vh;
+        z-index: 100;
+    }
     nav{
-        position: absolute;
-        top: 0;
-        height: 12vh;
+        display: inline-block;
+        width: 15vw;
+        padding-top: 3vh;
+        height: 5vh;
         border: 0px;
-        z-index: 100
+        top: 0;
+        right: 0vh;
         
     }
     #menu-icon{
         position: absolute;
-        top: 3vh;
-        right: 10vw;
         display: inline-block;
     }
-    nav ul, nav:active ul {
+    nav ul, nav:active ul{
         display: none;
         z-index: 1000;
-    }
-    nav:hover{
-        position: fixed;
-        top: 0;
-        height: 23vh;
         
     }
+        
     nav:hover ul{
-        margin-top: 8vh;
+        position: fixed;
         display: flex;
         flex-direction: column;
         align-items: flex-end;
-        background: #ffffff; 
-        border: 1px solid gray;
-/*        border-radius: 2px 2px 2px 2px;*/
-/*        width: 50vw;*/
+        padding: 3vh;
+        
     }
     nav ul li {
-        padding-left: 5vw;
+        padding-right: 5vw;
+        margin-top: 1vh;
+        width: 30vw;
+    }
+    nav ul li a{
+        display: inline-block;
+        font-weight: 700;
+        line-height: 0.7rem;
     }
     #menu_2{
     padding-bottom: 10vh;
@@ -353,8 +361,12 @@ div#main_slider figure img { width: 25%; float: left;}
         position: absolute;
         flex-direction: column;
         align-items: center;
-        width: 92.5vw;
-        z-index: -1;
+        width: 92.5vw;    
+
+    }
+    #slider img{
+        max-width: 100%;
+        height: auto;
     }
     #scond_page_body{
         overflow-x: hidden;
