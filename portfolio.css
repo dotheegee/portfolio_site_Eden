@@ -1,4 +1,4 @@
-#main_page_body{
+/*#main_page_body{*/
     font-family: 'Roboto', sans-serif;
     font-size: 14px;
 /*    overflow-x: hidden;*/
@@ -279,16 +279,16 @@ div#main_slider figure img { width: 25%; float: left;}
 
 @media only screen and (max-width: 768px) {
     
-    
+    #home_logo{
+        position: absolute;
+        top: 3vh;
+    }
     .aboutcontent{
         position: inherit;
         width: 95%;
     }
     #description_text{
         width: 80vw;
-    }
-    nav {
-        display: none;
     }
    
     .item_secondpage{
@@ -297,6 +297,14 @@ div#main_slider figure img { width: 25%; float: left;}
     }
     #menu{
         display: none;
+    }
+    nav{
+        position: absolute;
+        top: 0;
+        height: 12vh;
+        border: 0px;
+        z-index: 100
+        
     }
     #menu-icon{
         position: absolute;
@@ -308,19 +316,50 @@ div#main_slider figure img { width: 25%; float: left;}
         display: none;
         z-index: 1000;
     }
+    nav:hover{
+        position: fixed;
+        top: 0;
+        height: 23vh;
+        
+    }
     nav:hover ul{
-        display: block;
+        margin-top: 8vh;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        background: #ffffff; 
+        border: 1px solid gray;
+/*        border-radius: 2px 2px 2px 2px;*/
+/*        width: 50vw;*/
+    }
+    nav ul li {
+        padding-left: 5vw;
     }
     #menu_2{
     padding-bottom: 10vh;
-    width: 90vw;
+    width: 100vw;
     list-style: none;
     display: flex;
     font-size: 0.8rem;
     font-weight: 300;
-    justify-content: space-between;
+    justify-content: flex-end;
+    padding-left: 0; 
+    margin-left: 0;
     }
-    
+    #menu_2 li a{
+        margin-right: 12vw;
+    }
+    #slider{
+        position: absolute;
+        flex-direction: column;
+        align-items: center;
+        width: 92.5vw;
+        z-index: -1;
+    }
+    #scond_page_body{
+        overflow-x: hidden;
+    }
+
 }
 
 
