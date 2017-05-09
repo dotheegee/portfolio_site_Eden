@@ -275,7 +275,9 @@ div#main_slider figure img { width: 25%; float: left;}
 @media screen and (max-width: 768px) {
    
     #main_page_body{
-/*    overflow-y: visible;*/
+    overflow-x: hidden;
+    overflow-y: visible;    
+        
     }
     #home_logo{
         position: absolute;
@@ -297,22 +299,20 @@ div#main_slider figure img { width: 25%; float: left;}
         display: none;
     }
     header{
+        background-color:white;
+        position: fixed;
         display:inline-block;
-        height: 20vh;
+        height: 12vh;
         z-index: 100;
     }
     nav{
-        display:block;
-        width: 15vw;
-        padding-top: 3vh;
-        height: 5vh;
-        border: 0px;
-        top: 0;
-        right: 0vh;
-        
+        position: static;
+        border: 0;
     }
     #menu-icon{
         position: absolute;
+        top: 3vh;
+        right: 10vw;
         display: inline-block;
     }
     nav ul, nav:active ul{
@@ -322,22 +322,24 @@ div#main_slider figure img { width: 25%; float: left;}
     }
         
     nav:hover ul{
+        margin-top: 0;
         position: fixed;
+        top: 12vh;
         display: flex;
         flex-direction: column;
-        align-items: flex-end;
-        padding-top:  5vh;
-        padding-left: 3vh;
-        
-        
+        width: 90vw;  
+        background-color:white;
+        background:rgba(255, 255, 255, 0.6);
     }
     nav ul li {
-        padding-right: 5vw;
-        margin-top: 1vh;
-        width: 30vw;
+        margin: 0;
+        padding-top: 1vh;
+        padding-bottom: 1vh;
+        border-top: 1px solid gray;
+        text-align: center;
+        width: 89.5vw;
     }
     nav ul li a{
-        display: inline-block;
         font-weight: 700;
         line-height: 0.7rem;
     }
@@ -365,9 +367,6 @@ div#main_slider figure img { width: 25%; float: left;}
     #slider img{
         max-width: 100%;
         height: auto;
-    }
-    #scond_page_body{
-        overflow-x: hidden;
     }
 
 }
