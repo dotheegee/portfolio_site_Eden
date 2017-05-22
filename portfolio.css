@@ -307,6 +307,7 @@ div#main_slider figure img { width: 25%; float: left;}
     }
     nav{
         position: static;
+        margin-top: 12vh;
         border: 0;
     }
     #menu-icon{
@@ -315,21 +316,19 @@ div#main_slider figure img { width: 25%; float: left;}
         right: 10vw;
         display: inline-block;
     }
-    nav ul, nav:active ul{
-        display: none;
-        z-index: 1000;
         
-    }
-        
-    nav:hover ul{
-        margin-top: 0;
-        position: fixed;
-        top: 12vh;
-        display: flex;
+    nav ul{
+        height: 0;
+        margin: 0;
+        position: relative;
+        display: block;
         flex-direction: column;
         width: 90vw;  
         background-color:white;
         background:rgba(255, 255, 255, 0.6);
+    }
+    header nav ul.open{
+        height: auto;
     }
     nav ul li {
         margin: 0;
