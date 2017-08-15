@@ -11,6 +11,7 @@ li img, object{vertical-align:top;}
 input, select, textarea, form img{vertical-align:middle;}
 a{ outline:0; text-decoration:none; border:none;}
 body { font: 14px /1.2 "Roboto",sans-serif;, color:#666;   }
+a:visited{color: #111;}
 
 /*----------------------------------------------------------*/
 
@@ -22,7 +23,7 @@ body { font: 14px /1.2 "Roboto",sans-serif;, color:#666;   }
 #menu li a{font-size: 0.8rem; font-weight:300; }
 
 
-#nav{/*background-color: aqua; */overflow: hidden; position: fixed; width: 90vw; top: 13vh; border-bottom: 1px solid gray; padding-bottom: 2vh;}
+#nav{/*background-color: aqua; */overflow: hidden; position: fixed; width: 90vw; top: 13vh; border-bottom: 0.5px dotted gray; left: 5vw; padding-bottom: 2vh;}
 #nav ul{ display: flex; justify-content: space-between; font-size: 0.9rem; font-weight: 500;}
 #nav ul li a:hover{color:red;}
 
@@ -147,12 +148,12 @@ background-image: url(image/nav_2.png);}
     
     
     
-    #menu_2{ position: relative; margin-right: 4vw; bottom: -14vh;display: flex;justify-content: flex-start;font-size: 0.8rem;font-weight: 300;}
-    #menu_2 li{margin-left:2vh;}
+    #menu_2{ position: relative; bottom: -14vh;display: flex;justify-content: flex-start;font-size: 0.8rem;font-weight: 300; width: 100%;}
+    #menu_2 li{margin-left:3vh;}
     
    
    
-    #footer{position:relative; bottom: -17vh; margin-left: 3vw; }
+    #footer{ width: 100%; position:relative; bottom: -17vh; margin-left: 4vw; }
 }
 
 
