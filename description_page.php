@@ -1,3 +1,9 @@
+<?php
+    $conn = mysqli_connect("localhost", "missingyou13", "wlsthf13");
+    mysqli_select_db($conn, "missingyou13");
+    $result = mysqli_query($conn, "SELECT * FROM navi");
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -27,35 +33,37 @@
             <div id="nav">
                <a href="#" id="menu_icon"></a>
                 <ul>  
-                    <li><a href="#">Editorial</a></li>
-                    <li><a href="#">Typography</a></li>
-                    <li><a href="#">User interface</a></li>
-                    <li><a href="#">Brand Experience</a></li>
-                    <li><a href="#">Others</a></li>
-                    <li><a href="#">Contact</a></li>
+                <?php
+                    while( $row = mysqli_fetch_assoc($result)){
+                    echo '<li><a href="http://www.dothegee.org/index.php?id='.$row['id'].'">'.$row['category'].'</a></li>'."\n";}    
+                ?>
                 </ul>
             </div>
         </div>
-        
-        <div class="description">
-            <div class="aboutcontent">
-                <p id="description_subtitle">Brand Experience</p>
-                <p id="description_title">Dr.Nelson</p>
-                <p id="description_text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat nostrum ex libero nemo, velit harum rerum ratione. Veniam iure harum sit qui provident obcaecati, id est quod nam impedit earum in. Assumenda doloremque mollitia sapiente temporibus culpa exercitationem cum. Harum dolorum, facere mollitia deleniti asperiores animi ex molestias eligendi exercitationem.</p>
-                
-                <p id="year">Year: 2015</p>
+            
+            <div class="description">
+            <?php
+                $sql = "SELECT topic.id,title,subtitle,src,description,years,author FROM topic LEFT JOIN images ON images.gowithtopic = topic.id WHERE topic.id=".$_GET['id'];
+                $result = mysqli_query($conn,$sql);   
+                $row = mysqli_fetch_assoc($result);
+                echo '<div class="aboutcontent"><h3 id="description_subtitle">'
+                .$row['subtitle'].'</h3><h1 id="description_title">'
+                .$row['title'].'</h1><p id="description_text">'
+                .$row['description'].'</p><p id="year">'
+                .$row['years'].'</p>';
+          
+          ?>
             </div>
             <div id="slider_secondpage">
-                <img class="item_secondpage"src="/image/shoe.png" alt="">
-                <img class="item_secondpage"src="/image/shoe.png" alt="">
-                <img class="item_secondpage"src="/image/shoe.png" alt="">
-                <img class="item_secondpage"src="/image/shoe.png" alt="">
-                <img class="item_secondpage"src="/image/shoe.png" alt="">
-                <img class="item_secondpage"src="/image/shoe.png" alt="">
-                <img class="item_secondpage"src="/image/shoe.png" alt="">
+            <?php
+                $sql = "SELECT topic.id,title,subtitle,src,description,years,author FROM topic LEFT JOIN images ON images.gowithtopic = topic.id WHERE topic.id=".$_GET['id'];
+                $result = mysqli_query($conn,$sql);
+                while($row = mysqli_fetch_assoc($result)){   
+                echo '<img class="item_secondpage" src="'.$row['src'].'" alt="'.$row['alt'].'">';
+                }
+            ?>
             </div>
-        </div>
-            
+       
             <ul id="menu_2">
                 <li>
                     <a ng-href="about" href="about"> + About me </a>
